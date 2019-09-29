@@ -15,7 +15,7 @@ router.get("/:location", (req, res, next) => {
   }).pipe(res);
 });
 
-router.get("/userCount", (req, res, next) => {
+router.get("/users/userCount", (req, res, next) => {
   res.send(userCount);
 });
 
