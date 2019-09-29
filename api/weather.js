@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const https = require("https");
 const { apiKey } = require("../secrets/cred");
 const url = "http://api.openweathermap.org/data/2.5/weather";
 const request = require("request");
