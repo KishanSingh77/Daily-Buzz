@@ -21,7 +21,7 @@ router.get("/users/userCount", (req, res, next) => {
   console.log(userCount);
   console.log(places);
 
-  res.send("<h1>People checked for " + places.toString + "</h1>");
+  res.send("<h1>People checked for " + places.toString() + "</h1>");
 });
 
 module.exports = router;
