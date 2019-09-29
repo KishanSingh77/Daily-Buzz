@@ -17,11 +17,18 @@ router.get("/:location", (req, res, next) => {
   }).pipe(res);
 });
 
-router.get("/users/userCount", (req, res, next) => {
+router.get("/users/places", (req, res, next) => {
   console.log(userCount);
   console.log(places);
 
   res.send("<h1>People checked for " + places.toString() + "</h1>");
+});
+
+router.get("/users/count", (req, res, next) => {
+  console.log(userCount);
+  console.log(places);
+
+  res.send("<h1>People count " + userCount + "</h1>");
 });
 
 module.exports = router;
