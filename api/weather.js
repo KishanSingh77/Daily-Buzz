@@ -16,6 +16,7 @@ router.get("/:location", (req, res, next) => {
 });
 
 router.get("/users/userCount", (req, res, next) => {
+  console.log(userCount);
   res.send(userCount);
 });
 
