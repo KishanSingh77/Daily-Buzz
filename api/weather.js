@@ -4,10 +4,12 @@ const { apiKey } = require("../secrets/cred");
 const url = "http://api.openweathermap.org/data/2.5/weather";
 const request = require("request");
 let userCount = 0;
+let places = [];
 
 router.get("/:location", (req, res, next) => {
   userCount++;
   const location = req.params.location;
+  places.push(location);
   console.log(userCount);
 
   request({
@@ -17,7 +19,9 @@ router.get("/:location", (req, res, next) => {
 
 router.get("/users/userCount", (req, res, next) => {
   console.log(userCount);
-  res.send(userCount);
+  console.log(places);
+
+  res.send("People checked for " + places);
 });
 
 module.exports = router;
