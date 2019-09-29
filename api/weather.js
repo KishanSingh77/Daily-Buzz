@@ -8,10 +8,11 @@ let userCount = 0;
 router.get("/:location", (req, res, next) => {
   userCount++;
   const location = req.params.location;
+  console.log(userCount);
 
   request({
     uri: url + `?q=${location}&APPID=${apiKey}`
-  }).pipe("Welcome user" + userCount + res);
+  }).pipe(res);
 });
 
 module.exports = router;
