@@ -15,4 +15,8 @@ router.get("/:location", (req, res, next) => {
   }).pipe(res);
 });
 
+router.get("/userCount", (req, res, next) => {
+  res.send(userCount);
+});
+
 module.exports = router;
