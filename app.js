@@ -11,7 +11,8 @@ const port = process.env.PORT || 3000;
 
 mongoose.connect(
   "mongodb+srv://sam:vivek_1234@cluster0-hj5an.mongodb.net/test?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
+  { useNewUrlParser: true },
+  { useUnifiedTopology: true }
 );
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));

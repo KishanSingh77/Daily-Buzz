@@ -1,19 +1,27 @@
 const express = require("express");
 const router = express.Router();
 const request = require("request");
+const mongoose = require("mongoose");
+const searchWordSchema = require("../Models/Search_Keyword");
 
 const { googleNewsApiKey, news_url } = require("../secrets/Credentials");
 
 router.get("/:search", (req, res, next) => {
   const search_keyword = req.params.search;
+
+  //save search to Database
+  const searched_Word = new searchWordSchema({
+    word: search_keyword
+  });
+
+  searched_Word.save().then(data => console.log("data saved"));
+
   const urlQuery = news_url + `?q=${search_keyword}&apiKey=${googleNewsApiKey}`;
 
   request({ url: urlQuery }, (error, response, body) => {
     let output = JSON.parse(body);
     let display = '<h1 style="text-align:center;">News DashBoard</h1>';
-    console.log(output[0]);
-
-    // <p style="text-align:center;">Learn for free</p>
+    //  console.log(output);
 
     output.articles.forEach(article => {
       display = display.concat(
