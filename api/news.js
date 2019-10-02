@@ -44,7 +44,7 @@ router.get("/:search", (req, res, next) => {
           " </a>" +
           '<img src="' +
           article.urlToImage +
-          '"  style="width:500px;height:400px;" />' +
+          '"  style="width:400px;height:400px;" />' +
           // article.urlToImage +
 
           "<h4> " +
