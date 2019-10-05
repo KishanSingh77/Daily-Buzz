@@ -20,7 +20,7 @@ router.get("/:search", (req, res, next) => {
 
   request({ url: urlQuery }, (error, response, body) => {
     let output = JSON.parse(body);
-    let display = '<h1 style="text-align:center;">News DashBoard</h1>';
+    let display = '<h1 style="text-align:center;">Daily Buzz</h1>';
     //  console.log(output);
 
     output.articles.forEach(article => {
