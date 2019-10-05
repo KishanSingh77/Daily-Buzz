@@ -49,7 +49,8 @@ router.get("/:search", (req, res, next) => {
 
           "<h4> " +
           article.content +
-          "</h4> "
+          "</h4> " +
+          "<hr>"
       );
     });
 
