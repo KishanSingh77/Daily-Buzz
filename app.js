@@ -3,6 +3,7 @@ const app = express();
 const weatherRoute = require("./api/weather");
 const newsRoute = require("./api/news");
 const mongoose = require("mongoose");
+app.set("view engine", "ejs");
 
 const morgan = require("morgan");
 const bodyParser = require("body-parser");

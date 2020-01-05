@@ -1,0 +1,55 @@
+<style>
+  input[type="text"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color: blue;
+  }
+
+  input[type="text"]:focus {
+    width: 100%;
+  }
+</style>
+
+<nav
+  class="navbar navbar-default"
+  role="navigation"
+  style="background-color:black;"
+>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: red;">
+        <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+        Just News, Anywhere, Everywhere!!
+      </a>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/news/headlines" style="color: red;">Top Headlines</a></li>
+        <li>
+          <a href="/news/headlines" style="color: red;">Breaking News </a>
+        </li>
+        <li><a href="/news/politics" style="color: red;">Politics</a></li>
+        <li><a href="/news/technology" style="color: red;">Tech </a></li>
+        <li><a href="/news/viral" style="color: red;">Viral Videos</a></li>
+        <li><a href="/news/sports" style="color: red;">Sports</a></li>
+        <li>
+          <input
+            type="text"
+            style="text-align: right;"
+            name="search"
+            placeholder="Search.."
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

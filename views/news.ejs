@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('head') %>
+  </head>
+  <body class="container" style="background-color: black;">
+    <header>
+      <%- include ('header') %>
+    </header>
+
+    <main>
+      <div>
+        <h1 style="text-align:center; color: red;">Daily Buzz</h1>
+        <p    style="text-align:center;color: tomato;">Welcome to one stop station for Latest News!!</p>
+
+        <% for (let i = 0; i < articles.length; i++) { %>
+          <div class="jumbotron">
+             <span class="b" 
+          style="  display: inline-block;
+           
+            padding: 5px;
+            border: 1px solid red;    
+            background-color: black; 
+            color: white;
+            "> <img src =<%= articles[i].urlToImage %>
+          style="width:400px;height:400px;border-radius: 50%;></span>
+
+
+        <span class="b" 
+        style="  display: inline-block;
+          
+          padding: 5px;
+          border: 1px solid red;    
+          background-color: black; 
+          color: white;
+          "
+          >
+          <h3 style="color: red;"><%= articles[i].title %></h3>
+          
+          <h5><%= articles[i].source.name %></h5>
+          <h5><%= articles[i].author %></h5>
+          <br /><%= articles[i].publishedAt.substring(0,10) %> <br><%= articles[i].description %>
+          <br />
+      
+          <h4 style="color: blue;"><%= articles[i].content.substring(0,200) %>...</h4>
+          <a href=<%= articles[i].url %>> Read full Story . . </a> 
+         
+          <hr />
+        </span>    
+
+
+       
+          
+        </div>
+
+        <%}%>
+      </div>
+    </main>
+
+    <footer>
+      <%- include ('footer') %>
+    </footer>
+  </body>
+</html>
